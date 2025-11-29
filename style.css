@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    font-style: italic;
+}
+
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.wish-link {
+    display: block;
+    padding: 20px 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.wish-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+/* Стили для страниц с пожеланиями */
+.wish-page {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.wish-number {
+    font-size: 1.2em;
+    color: #667eea;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.wish-text {
+    font-size: 1.4em;
+    line-height: 1.8;
+    margin: 40px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.wish-text::before {
+    content: '"';
+    font-size: 4em;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    color: rgba(255,255,255,0.3);
+}
+
+/* Навигация убрана */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .wishes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .wish-text {
+        font-size: 1.2em;
+        padding: 30px 20px;
+    }
+}
