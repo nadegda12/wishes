@@ -43,14 +43,14 @@ h1 {
     font-style: italic;
 }
 
-.predictions-grid {
+.wishes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     margin-bottom: 40px;
 }
 
-.prediction-link {
+.wish-link {
     display: block;
     padding: 20px 15px;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -63,7 +63,7 @@ h1 {
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-.prediction-link:hover {
+.wish-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
     background: linear-gradient(135deg, #764ba2, #667eea);
@@ -78,59 +78,42 @@ footer {
     margin-top: 30px;
 }
 
-/* Стили для страниц с предсказаниями */
-.prediction-page {
+/* Стили для страниц с пожеланиями */
+.wish-page {
     text-align: center;
     padding: 60px 40px;
-    min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-.prediction-number {
-    font-size: 1.4em;
+.wish-number {
+    font-size: 1.2em;
     color: #667eea;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.prediction-text {
-    font-size: 1.5em;
+.wish-text {
+    font-size: 1.4em;
     line-height: 1.8;
     margin: 40px 0;
-    padding: 50px 40px;
+    padding: 40px;
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     color: white;
     border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     position: relative;
-    font-style: italic;
 }
 
-.prediction-text::before {
+.wish-text::before {
     content: '"';
-    font-size: 5em;
+    font-size: 4em;
     position: absolute;
-    top: -30px;
-    left: 30px;
+    top: -20px;
+    left: 20px;
     color: rgba(255,255,255,0.3);
-    font-family: serif;
 }
 
-.prediction-text::after {
-    content: '"';
-    font-size: 5em;
-    position: absolute;
-    bottom: -60px;
-    right: 30px;
-    color: rgba(255,255,255,0.3);
-    font-family: serif;
-}
+/* Навигация убрана */
 
-/* Адаптивность */
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -140,50 +123,12 @@ footer {
         font-size: 2em;
     }
     
-    .predictions-grid {
+    .wishes-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 10px;
     }
     
-    .prediction-link {
-        padding: 15px 10px;
-        font-size: 0.9em;
-    }
-    
-    .prediction-text {
+    .wish-text {
         font-size: 1.2em;
         padding: 30px 20px;
-        margin: 20px 0;
-    }
-    
-    .prediction-text::before {
-        font-size: 3em;
-        top: -15px;
-        left: 15px;
-    }
-    
-    .prediction-text::after {
-        font-size: 3em;
-        bottom: -40px;
-        right: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.7em;
-    }
-    
-    .subtitle {
-        font-size: 1em;
-    }
-    
-    .predictions-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .prediction-text {
-        font-size: 1.1em;
-        padding: 25px 15px;
     }
 }
